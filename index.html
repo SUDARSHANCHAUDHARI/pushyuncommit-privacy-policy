@@ -1,81 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – PushyUncommit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PushyUncommit Privacy Policy</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #222;
-      background: #fafafa;
-      padding: 24px 16px 64px;
-    }
-    .container { max-width: 800px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 40px 48px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-    h1 { font-size: 2rem; font-weight: 700; color: #1976D2; margin-bottom: 4px; }
-    .meta { color: #666; font-size: 0.9rem; margin-bottom: 36px; }
-    h2 { font-size: 1.15rem; font-weight: 600; color: #1976D2; margin: 32px 0 10px; }
-    p { margin-bottom: 12px; color: #333; }
-    ul { margin: 8px 0 12px 20px; }
-    ul li { margin-bottom: 6px; color: #333; }
-    a { color: #1976D2; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .highlight { background: #E3F2FD; border-left: 4px solid #1976D2; border-radius: 4px; padding: 14px 18px; margin: 16px 0; }
-    @media (max-width: 600px) {
-      .container { padding: 24px 20px; }
-      h1 { font-size: 1.5rem; }
-    }
+    :root { color-scheme: light dark; --bg: #f7f8fb; --fg: #18202f; --muted: #5c667a; --card: #ffffff; --border: #d9dee8; --link: #175bd6; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #111318; --fg: #edf1f7; --muted: #a8b0c0; --card: #191d25; --border: #303746; --link: #8bb4ff; } }
+    body { margin: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    main { max-width: 920px; margin: 0 auto; padding: 40px 20px 64px; }
+    article { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 28px; }
+    h1 { margin-top: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+    h2 { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    h3, h4 { margin-top: 1.4rem; }
+    p, li { color: var(--fg); }
+    a { color: var(--link); }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+    strong { font-weight: 700; }
+    @media (max-width: 640px) { article { padding: 20px; } main { padding: 20px 12px 48px; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <p class="meta">PushyUncommit &nbsp;·&nbsp; Last updated: April 26, 2026 &nbsp;·&nbsp; Developer: SudarshanTechLabs</p>
+  <main>
+    <article>
+      <h1>PushyUncommit Privacy Policy</h1>
+      <p><strong>Effective Date:</strong> May 17, 2026</p>
+      <p><em>Last updated: May 17, 2026</em></p>
+      <p><strong>Version:</strong> 1.1.0</p>
+      <p>PushyUncommit (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is a developer tool. PushyUncommit is a developer tool that helps review git repository status and can connect to a local server you run on your own machine. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using PushyUncommit you agree to the practices described below.</p>
+      <h2>Information We Collect</h2>
+      <h3>Location Data</h3>
+      <ul>
+      <li>PushyUncommit does not collect location data.</li>
+      </ul>
+      <h3>Account Information</h3>
+      <ul>
+      <li>No PushyUncommit account is required.</li>
+      <li>If you use GitHub integration, GitHub receives the API requests you make through the tool.</li>
+      </ul>
+      <h3>Device Information</h3>
+      <ul>
+      <li>Repository paths, git status summaries, local server URL, preferences, and optional GitHub query settings may be processed locally.</li>
+      </ul>
+      <h2>How We Use Your Information</h2>
+      <h3>Location Sharing</h3>
+      <ul>
+      <li>PushyUncommit does not use your location.</li>
+      </ul>
+      <h3>Account Management</h3>
+      <ul>
+      <li>Show local git repository status and help you inspect uncommitted work.</li>
+      <li>Connect to a local PushyUncommit server when you configure one.</li>
+      <li>Query GitHub only when you use GitHub-related features.</li>
+      </ul>
+      <h3>Service Improvement</h3>
+      <ul>
+      <li>Improve developer workflow visibility.</li>
+      <li>We do not operate a cloud service that stores your repository contents.</li>
+      </ul>
+      <h2>Storage and Retention</h2>
+      <h3>Data Storage</h3>
+      <ul>
+      <li>Settings such as local server URL may be stored locally.</li>
+      <li>Repository status is read from your local machine or local server instance.</li>
+      <li>GitHub data is requested directly from GitHub when you use GitHub features.</li>
+      </ul>
+      <h3>Data Retention</h3>
+      <ul>
+      <li>Local settings remain until you clear them or uninstall the app/tool.</li>
+      <li>Git repository data remains in your local repositories.</li>
+      </ul>
+      <h3>Data Security</h3>
+      <ul>
+      <li>Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.</li>
+      <li>Local data remains on your device or browser unless a feature you use requires a named third-party service.</li>
+      <li>Network communication uses HTTPS/TLS where applicable.</li>
+      <li>You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.</li>
+      </ul>
+      <h2>Data Sharing</h2>
+      <h3>Family Groups</h3>
+      <ul>
+      <li>PushyUncommit does not use MyFamilyTracker-style family groups unless explicitly described in this policy.</li>
+      <li>If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.</li>
+      <li>You control feature use through the app settings, permissions, account controls, or platform settings.</li>
+      </ul>
+      <h3>Third Parties</h3>
+      <ul>
+      <li>GitHub receives API requests only when you use GitHub integration.</li>
+      <li>No repository contents are sent to Sudarshan Tech Labs servers.</li>
+      </ul>
+      <p>We do <strong>not</strong> share your data with:</p>
+      <ul>
+      <li>Data brokers</li>
+      <li>Unrelated advertising networks, unless advertising is explicitly listed above for this app</li>
+      <li>Third parties unrelated to the app features described in this policy</li>
+      </ul>
+      <h2>Permissions Used</h2>
+      <h3>Required Permissions</h3>
+      <ul>
+      <li><strong>Network access/INTERNET</strong>: Used to connect to your local PushyUncommit server or GitHub when configured.</li>
+      </ul>
+      <h3>Optional Permissions</h3>
+      <ul>
+      <li>GitHub integration and local server connection are configured by you.</li>
+      </ul>
+      <h2>Your Rights and Controls</h2>
+      <h3>Location Sharing Control</h3>
+      <ul>
+      <li>No location sharing exists in PushyUncommit.</li>
+      </ul>
+      <h3>Account Management</h3>
+      <ul>
+      <li>No PushyUncommit account is required; GitHub account controls live in GitHub settings.</li>
+      </ul>
+      <h3>Data Access</h3>
+      <ul>
+      <li>You can clear local settings and disconnect from local/GitHub integrations at any time.</li>
+      </ul>
+      <h3>GDPR Rights (EU Users)</h3>
+      <p>If you are in the European Union, you have additional rights:</p>
+      <ul>
+      <li><strong>Right to Access</strong>: Request a copy of your personal data</li>
+      <li><strong>Right to Rectification</strong>: Correct inaccurate data</li>
+      <li><strong>Right to Erasure</strong>: Request deletion of your data</li>
+      <li><strong>Right to Restrict Processing</strong>: Limit how we use your data</li>
+      <li><strong>Right to Data Portability</strong>: Receive your data in a portable format</li>
+      <li><strong>Right to Object</strong>: Object to certain types of processing</li>
+      </ul>
+      <p>To exercise these rights, contact us using the methods in the Contact Us section.</p>
+      <h3>Permissions</h3>
+      <ul>
+      <li>You can revoke Android permissions in Android Settings -&gt; Apps -&gt; PushyUncommit -&gt; Permissions.</li>
+      <li>Browser permissions and storage can be managed in your browser site settings for web apps.</li>
+      <li>Revoking required permissions may prevent related features from functioning.</li>
+      </ul>
+      <h2>Children&#39;s Privacy</h2>
+      <ul>
+      <li>Our app is <strong>not intended for children under 13</strong>.</li>
+      <li>We do not knowingly collect data from children under 13.</li>
+      <li>If you are a parent or guardian and believe your child has provided personal information, please contact us to request deletion.</li>
+      <li>Parents and guardians should supervise children&#39;s use of apps that store personal content.</li>
+      </ul>
+      <h2>Security</h2>
+      <ul>
+      <li>Local data is protected by Android, browser, or operating-system app sandboxing.</li>
+      <li>Network communication uses HTTPS/TLS where applicable.</li>
+      <li>Third-party services named in this policy provide their own security controls and privacy policies.</li>
+      <li>You are responsible for protecting your device, browser profile, and account credentials.</li>
+      <li>We do not sell your personal data.</li>
+      </ul>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy to reflect new features, legal requirements, or changes in our practices. Significant changes will be:</p>
+      <ul>
+      <li>Noted in the app release notes or repository when applicable</li>
+      <li>Reflected with a new &quot;Last updated&quot; date</li>
+      <li>Communicated in the app or project page if the change is significant</li>
+      </ul>
+      <p>The &quot;Last updated&quot; date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, wish to request data deletion, or have privacy concerns:</p>
+      <ul>
+      <li><strong>GitHub Repository:</strong> https://github.com/SUDARSHANCHAUDHARI/pushyuncommit-privacy-policy</li>
+      <li><strong>Email:</strong> sunny.sudarshan@gmail.com</li>
+      <li><strong>Main App Repository:</strong> https://github.com/SUDARSHANCHAUDHARI/PushyUncommit</li>
+      </ul>
+      <p>We will respond as quickly as possible, typically within 48 hours.</p>
+      <h2>Data Deletion</h2>
+      <h3>How to Delete Your Account</h3>
+      <p>This app does not require an account. You can delete local app data using the options below:</p>
+      <h4>Option 1: In-App Deletion</h4>
+      <ol>
+      <li>Open PushyUncommit</li>
+      <li>Delete individual entries, reminders, history, or settings where the app provides controls</li>
+      <li>Or use Android/browser settings to clear app/site data</li>
+      <li>Uninstalling the app also removes local app-private data</li>
+      </ol>
+      <h4>Option 2: Email Deletion Request</h4>
+      <p>Send an email to: <strong>support@sudarshantechlabs.com</strong> or <strong>sunny.sudarshan@gmail.com</strong></p>
+      <ul>
+      <li>Subject: &quot;Data Deletion Request - PushyUncommit&quot;</li>
+      <li>Include: The email/account identifier used in the app, if any</li>
+      <li>We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement</li>
+      </ul>
+      <h4>Option 3: Web Deletion</h4>
+      <ol>
+      <li>Visit the privacy policy website for contact and support information</li>
+      <li>For browser apps, clear browser storage for the site</li>
+      <li>For Android apps, clear storage from Android Settings if you want a full local reset</li>
+      </ol>
+      <h3>What Gets Deleted</h3>
+      <ul>
+      <li>Local app data stored by the app</li>
+      <li>Local preferences and reminder/history records</li>
+      <li>Cached data controlled by the app or browser</li>
+      <li>Exported/shared files only if you delete them from where you saved them</li>
+      </ul>
+      <h3>Data Retention After Deletion</h3>
+      <ul>
+      <li><strong>Immediate:</strong> clearing app/site data removes local app-private data from your device/browser</li>
+      <li><strong>Uninstall:</strong> removes app-private local data from Android apps</li>
+      <li><strong>Exports/shared files:</strong> remain wherever you saved or sent them until you delete them</li>
+      </ul>
+      <p>To request deletion of your data:</p>
+      <ol>
+      <li>Open PushyUncommit, if installed</li>
+      <li>Delete local content or clear app/site data where applicable</li>
+      <li>Contact support via email: sunny.sudarshan@gmail.com</li>
+      <li>Request account/data deletion and include enough detail for us to identify the app and any account, if one exists</li>
+      <li>We will confirm what data can be deleted and complete the request according to the retention terms above</li>
+      </ol>
+      <h2>Firebase and Google Services</h2>
+      <p>This app may use the following services depending on the features you enable and the installed version:</p>
+      <ul>
+      <li>GitHub API when you enable GitHub features</li>
+      <li>A local PushyUncommit server you run yourself</li>
+      </ul>
+      <p>Please review relevant third-party privacy policies:</p>
+      <ul>
+      <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+      <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
+      <li><a href="https://play.google.com/about/play-terms/">Google Play Terms</a></li>
+      <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a></li>
+      </ul>
+      <h2>About PushyUncommit</h2>
+      <p>PushyUncommit is built with privacy in mind. The app is built with:</p>
+      <ul>
+      <li>React/TypeScript developer tooling</li>
+      <li>Local git status inspection</li>
+      <li>Optional GitHub integration</li>
+      <li>Optional local server connection</li>
+      </ul>
+      <p>The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.</p>
+      <hr>
+      <p><strong>Last Updated:</strong> May 17, 2026</p>
+      <hr>
+      <h2>Recent Updates (Version 1.1.0 - May 17, 2026)</h2>
+      <ul>
+      <li><strong>Aligned policy with the shared privacy-policy structure.</strong></li>
+      <li><strong>Clarified local developer-tool data, local server use, and GitHub integration.</strong></li>
+      </ul>
 
-    <div class="highlight">
-      <strong>Short version:</strong> PushyUncommit does not collect, store, or share any personal data. All communication stays between your phone and your own machine on your local network.
-    </div>
-
-    <h2>Overview</h2>
-    <p>PushyUncommit is a developer tool that connects to a Python server you run on your own computer. The app shows you the status of your git repositories. No data is sent to any third-party server, and no personal information is collected by SudarshanTechLabs.</p>
-
-    <h2>What We Don't Collect</h2>
-    <p>We do not collect, transmit, or store:</p>
-    <ul>
-      <li>Your name, email address, or any account information</li>
-      <li>Your location</li>
-      <li>Your contacts or calendar</li>
-      <li>Usage analytics or crash reports</li>
-      <li>Device identifiers or advertising IDs</li>
-      <li>Any content from your git repositories</li>
-    </ul>
-
-    <h2>Permissions</h2>
-    <p>The app requests only:</p>
-    <ul>
-      <li><strong>Internet</strong> — required to connect to the PushyUncommit Python server running on your local machine or network. All traffic goes directly to a server you control; no data passes through any external server.</li>
-    </ul>
-
-    <h2>Local Storage</h2>
-    <p>The app stores your server URL (e.g. <code>http://192.168.1.x:8080</code>) locally on your device using Android's AsyncStorage so you don't have to re-enter it every time. This data never leaves your device.</p>
-
-    <h2>Your Own Server</h2>
-    <p>PushyUncommit communicates with a Python server you install and run yourself (<code>python -m PushyUncommit --web</code>). You are in full control of that server and any data it processes. SudarshanTechLabs has no access to your server or its data.</p>
-
-    <h2>Third-Party Services</h2>
-    <p>The mobile app uses no third-party SDKs, analytics libraries, or advertising frameworks. There are no embedded trackers of any kind.</p>
-
-    <h2>Children's Privacy</h2>
-    <p>PushyUncommit is a developer tool intended for adults. We do not knowingly collect any information from children under 13.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>If this policy changes, the updated version will be posted at this URL with a new "Last updated" date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-
-    <h2>Contact</h2>
-    <p>Questions or concerns? Reach us at <a href="mailto:sunny.sudarshan@gmail.com">sunny.sudarshan@gmail.com</a></p>
-  </div>
+    </article>
+  </main>
 </body>
 </html>
