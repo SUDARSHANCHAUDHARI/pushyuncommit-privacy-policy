@@ -1,0 +1,17 @@
+# Local AI task notes
+CLAUDE_TASKS.md
+
+# macOS
+.DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+local.properties
+keystore.properties
+signing.properties
+google-services*.json
+.claude-plugin-config.json
