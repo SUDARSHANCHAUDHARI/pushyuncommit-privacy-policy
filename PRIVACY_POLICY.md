@@ -73,6 +73,14 @@ PushyUncommit ("we," "our," or "us") is a developer tool you run on your own mac
 - **A notification destination you configure yourself.** The Slack, Discord and generic webhook plugins post to a URL you supply, and what they send includes the repository name, the issue type and **the repository's path on your filesystem**. The email plugin sends through an SMTP server you supply, using credentials you supply. None of these is enabled by default, and none of them sends anything to us.
 - **No repository contents and no code are sent anywhere by the tool**, to us or to anyone else.
 
+### The VS Code, Desktop and Mobile Front Ends
+
+PushyUncommit also ships three optional front ends. None of them contacts us or any third party:
+
+- **The VS Code extension** makes no network request at all. It runs `git` on your machine and reads the result. Note that its commit-and-push action does run `git push`, which sends your commits to whichever remote that repository already points at — your own GitHub, GitLab or other host. That is the same thing as pushing from your terminal, and it happens only when you use that action.
+- **The Electron desktop app** loads only files bundled inside it, enforced by a content security policy of `default-src 'self'`. It fetches nothing from the internet, including from a CDN.
+- **The React Native mobile app** connects to one address: the dashboard URL you type into it yourself, normally your own machine on your own network. It stores that URL and the dashboard token in the phone's `AsyncStorage`, which is ordinary app storage and not the device keychain. **If you type an `http://` address rather than `https://`, that traffic is unencrypted**, so anyone else on the same Wi-Fi can read your repository list and capture the dashboard token as it goes past. Use it on a network you trust.
+
 We do **not** share your data with:
 
 - Data brokers
@@ -245,6 +253,7 @@ Your code never leaves your machine. The things that can leave it are a GitHub A
 - **Said the bundled analytics plugin is local-only.** It writes `~/.PushyUncommit/analytics.json` and uploads nothing. "Analytics" in a privacy policy usually means the opposite, so it is worth stating plainly.
 - **Removed the Android and browser-app scaffold.** PushyUncommit is a Python command-line tool, not an Android app: the policy told you to revoke permissions in "Android Settings -> Apps -> PushyUncommit", which does not exist. The "Family Groups" heading, shared with sibling policies, is also gone — there is no pairing or sharing in this tool.
 - **Replaced the mobile deletion steps with the real ones:** delete `~/.PushyUncommit/`, uninstall the package, and revoke the GitHub token and any webhook URLs at the services that issued them.
+- **Covered the three optional front ends**, which the policy had never distinguished from the command-line tool. The VS Code extension makes no network request but can run `git push` for you; the Electron desktop app loads only bundled files under a `default-src 'self'` policy; the mobile app talks only to the dashboard address you type in, keeps that address and the dashboard token in ordinary `AsyncStorage` rather than the keychain, and **sends them in clear text if you give it an `http://` address.**
 
 ## Recent Updates (Version 1.1.0 - May 17, 2026)
 

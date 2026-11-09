@@ -96,6 +96,13 @@
       <li><strong>A notification destination you configure yourself.</strong> The Slack, Discord and generic webhook plugins post to a URL you supply, and what they send includes the repository name, the issue type and <strong>the repository's path on your filesystem</strong>. The email plugin sends through an SMTP server you supply, using credentials you supply. None of these is enabled by default, and none of them sends anything to us.</li>
       <li><strong>No repository contents and no code are sent anywhere by the tool</strong>, to us or to anyone else.</li>
       </ul>
+      <h3>The VS Code, Desktop and Mobile Front Ends</h3>
+      <p>PushyUncommit also ships three optional front ends. None of them contacts us or any third party:</p>
+      <ul>
+      <li><strong>The VS Code extension</strong> makes no network request at all. It runs <code>git</code> on your machine and reads the result. Note that its commit-and-push action does run <code>git push</code>, which sends your commits to whichever remote that repository already points at — your own GitHub, GitLab or other host. That is the same thing as pushing from your terminal, and it happens only when you use that action.</li>
+      <li><strong>The Electron desktop app</strong> loads only files bundled inside it, enforced by a content security policy of <code>default-src 'self'</code>. It fetches nothing from the internet, including from a CDN.</li>
+      <li><strong>The React Native mobile app</strong> connects to one address: the dashboard URL you type into it yourself, normally your own machine on your own network. It stores that URL and the dashboard token in the phone's <code>AsyncStorage</code>, which is ordinary app storage and not the device keychain. <strong>If you type an <code>http://</code> address rather than <code>https://</code>, that traffic is unencrypted</strong>, so anyone else on the same Wi-Fi can read your repository list and capture the dashboard token as it goes past. Use it on a network you trust.</li>
+      </ul>
       <p>We do <strong>not</strong> share your data with:</p>
       <ul>
       <li>Data brokers</li>
@@ -259,6 +266,7 @@
       <li><strong>Said the bundled analytics plugin is local-only.</strong> It writes <code>~/.PushyUncommit/analytics.json</code> and uploads nothing. &quot;Analytics&quot; in a privacy policy usually means the opposite, so it is worth stating plainly.</li>
       <li><strong>Removed the Android and browser-app scaffold.</strong> PushyUncommit is a Python command-line tool, not an Android app: the policy told you to revoke permissions in &quot;Android Settings -&gt; Apps -&gt; PushyUncommit&quot;, which does not exist. The &quot;Family Groups&quot; heading, shared with sibling policies, is also gone — there is no pairing or sharing in this tool.</li>
       <li><strong>Replaced the mobile deletion steps with the real ones:</strong> delete <code>~/.PushyUncommit/</code>, uninstall the package, and revoke the GitHub token and any webhook URLs at the services that issued them.</li>
+      <li><strong>Covered the three optional front ends</strong>, which the policy had never distinguished from the command-line tool. The VS Code extension makes no network request but can run <code>git push</code> for you; the Electron desktop app loads only bundled files under a <code>default-src 'self'</code> policy; the mobile app talks only to the dashboard address you type in, keeps that address and the dashboard token in ordinary <code>AsyncStorage</code> rather than the keychain, and <strong>sends them in clear text if you give it an <code>http://</code> address.</strong></li>
       </ul>
 
       <h2>Recent Updates (Version 1.1.0 - May 17, 2026)</h2>
